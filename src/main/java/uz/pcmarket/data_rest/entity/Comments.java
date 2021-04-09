@@ -13,7 +13,7 @@ import javax.persistence.OneToOne;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
+@Entity(name = "commentt")
 public class Comments extends AbsEntity {
 
     private String body;

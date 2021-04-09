@@ -30,6 +30,9 @@ public interface ProductRepository extends JpaRepository<Product, Integer> {
     @RestResource(path = "byCategory")
     Page<Product> findAllByCategory(Category category, Pageable pageable);
 
+
+
+
     @RestResource(path = "byActive")
     Page<Product> findAllByActive(boolean active, Pageable pageable);
 }
