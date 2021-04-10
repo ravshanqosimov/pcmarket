@@ -15,24 +15,21 @@ public interface ProductRepository extends JpaRepository<Product, Integer> {
 
 
     @RestResource(path = "byName")
-    Page<Product> findAllByName(@Param("name") String name, Pageable pageable);
+    Page<Product> findAllByName(@Param("name") String name);
 
     @RestResource(path = "byModel")
-    Page<Product> findAllByModel(String model, Pageable pageable);
+    Page<Product> findAllByModel(@Param("model") String model);
 
 
     @RestResource(path = "byDescription")
-    Page<Product> findAllByDescription(String description, Pageable pageable);
+    Page<Product> findAllByDescription(@Param("description") String description);
 
     @RestResource(path = "byPrice")
-    Page<Product> findAllByPrice(Double price, Pageable pageable);
+    Page<Product> findAllByPriceBetween(@Param("minPrice") Double minPrice, @Param("maxPrice") Double maxPrice);
 
     @RestResource(path = "byCategory")
-    Page<Product> findAllByCategory(Category category, Pageable pageable);
-
-
-
+    Page<Product> findAllByCategory(@Param("category") Category category);
 
     @RestResource(path = "byActive")
-    Page<Product> findAllByActive(boolean active, Pageable pageable);
+    Page<Product> findAllByActive(@Param("active") boolean active);
 }
