@@ -16,7 +16,7 @@ import javax.persistence.Entity;
 @AllArgsConstructor
 @Entity
 public class Region extends AbsEntity {
-@Column(nullable = false,unique = true)
+    @Column(nullable = false, unique = true)
     private String name;
 
 }
