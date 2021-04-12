@@ -13,7 +13,7 @@ import uz.pcmarket.data_rest.projection.CustomProduct;
 
 import java.util.List;
 
-@RepositoryRestResource(path = "byProduct",excerptProjection = CustomProduct.class)
+@RepositoryRestResource(path = "product",excerptProjection = CustomProduct.class)
 public interface ProductRepository extends JpaRepository<Product, Integer> {
 
 
